@@ -1,0 +1,963 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="VASModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AttachmentType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AttachmentType" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="AttachmentTypeEn" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="BankTransactionType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BankTransactionType" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="BankTransactionTypeEn" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ChargeType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ChargeType" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ChargeTypeEn" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Currency">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CurrencyType" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CurrencyTypeEn" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CustomerType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustomerType" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CustomerTypeEn" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="DiscountType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DiscountType" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DiscountTypeEn" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Language">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Language" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LanguageEn" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="MessageType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MessageType" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MessageTypeEn" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PersonType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PersonType" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PersonTypeEn" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ServiceOutputType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ServiceOutputType" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ServiceOutputTypeEn" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ServiceType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ServiceType" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ServiceTypeEn" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TransactionType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BalanceType" Type="bit" Nullable="false" />
+    <Property Name="TransactionType" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TransactionTypeEn" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ActivityLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SubscriptionId" Type="int" Nullable="false" />
+    <Property Name="RequestHeader" Type="varchar" MaxLength="2000" />
+    <Property Name="ResponseHeader" Type="varchar" MaxLength="2000" />
+    <Property Name="ResponseBody" Type="nvarchar(max)" />
+    <Property Name="StatusCode" Type="smallint" />
+    <Property Name="URI" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="AttachmentFile">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ItemId" Type="int" Nullable="false" />
+    <Property Name="AttachmentTypeId" Type="tinyint" />
+    <Property Name="FileType" Type="char" MaxLength="50" Nullable="false" />
+    <Property Name="FileName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="FileContent" Type="varbinary(max)" />
+    <Property Name="InsertDateTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Coupon">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Code" Type="nvarchar" MaxLength="20" />
+    <Property Name="DiscountTypeId" Type="tinyint" Nullable="false" />
+    <Property Name="Amount" Type="int" />
+    <Property Name="ExpirationDate" Type="datetime" />
+    <Property Name="UsageLimit" Type="int" />
+    <Property Name="Description" Type="nvarchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustomerTypeId" Type="tinyint" Nullable="false" />
+    <Property Name="RequestId" Type="int" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="100" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="FatherName" Type="nvarchar" MaxLength="100" />
+    <Property Name="IdentityNo" Type="varchar" MaxLength="10" />
+    <Property Name="BirthDate" Type="int" />
+    <Property Name="BirthPlace" Type="nvarchar" MaxLength="50" />
+    <Property Name="NationalCode" Type="char" MaxLength="10" />
+    <Property Name="NationalId" Type="char" MaxLength="11" />
+    <Property Name="EducationDegree" Type="nvarchar" MaxLength="100" />
+    <Property Name="OrganizationPost" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Phone" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Mobile" Type="varchar" MaxLength="15" />
+    <Property Name="AgentName" Type="nvarchar" MaxLength="100" />
+    <Property Name="AgentMobile" Type="varchar" MaxLength="15" />
+    <Property Name="AgentEmail" Type="varchar" MaxLength="50" />
+    <Property Name="AgentOrganizationPost" Type="nvarchar" MaxLength="50" />
+    <Property Name="ActivityType" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Country" Type="nvarchar" MaxLength="50" />
+    <Property Name="Province" Type="nvarchar" MaxLength="50" />
+    <Property Name="City" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar" MaxLength="200" />
+    <Property Name="PostalCode" Type="char" MaxLength="10" />
+    <Property Name="HasTax" Type="bit" />
+    <Property Name="InsertDateTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Message">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MessgaeTypeId" Type="tinyint" Nullable="false" />
+    <Property Name="ParentMessageId" Type="int" />
+    <Property Name="MessageTitle" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="SenderUserId" Type="int" Nullable="false" />
+    <Property Name="RecieverUserId" Type="int" Nullable="false" />
+    <Property Name="IsUrgent" Type="bit" Nullable="false" />
+    <Property Name="SendDateTime" Type="datetime" Nullable="false" />
+    <Property Name="ReadDateTime" Type="datetime" />
+    <Property Name="MessageContent" Type="nvarchar" MaxLength="2000" />
+    <Property Name="DeleteDateTime" Type="datetime" />
+    <Property Name="DeleteUserId" Type="int" />
+  </EntityType>
+  <EntityType Name="MessageTemplate">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LanguageId" Type="tinyint" Nullable="false" />
+    <Property Name="MessageTitle" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="MessageBody" Type="nvarchar" MaxLength="2000" />
+  </EntityType>
+  <EntityType Name="Price">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="PriceDetailId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PriceDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CurrencyId" Type="tinyint" Nullable="false" />
+    <Property Name="ActivateDate" Type="date" Nullable="false" />
+    <Property Name="ExpireDate" Type="date" Nullable="false" />
+    <Property Name="Price" Type="int" Nullable="false" />
+    <Property Name="IsDefault" Type="bit" Nullable="false" />
+    <Property Name="InsertDateTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductFamilyId" Type="tinyint" Nullable="false" />
+    <Property Name="Trial" Type="int" />
+    <Property Name="PriceId" Type="int" />
+  </EntityType>
+  <EntityType Name="ProductFamily">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LanguageId" Type="tinyint" Nullable="false" />
+    <Property Name="PriceId" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="ProductInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductId" Type="int" Nullable="false" />
+    <Property Name="LanguageTypeId" Type="tinyint" Nullable="false" />
+    <Property Name="ProductName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Description" Type="nvarchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="ProductService">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductId" Type="int" Nullable="false" />
+    <Property Name="ServiceId" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Request">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PersonTypeId" Type="tinyint" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="100" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="FatherName" Type="nvarchar" MaxLength="100" />
+    <Property Name="IdentityNo" Type="varchar" MaxLength="10" />
+    <Property Name="BirthDate" Type="int" />
+    <Property Name="BirthPlace" Type="nvarchar" MaxLength="50" />
+    <Property Name="NationalCode" Type="char" MaxLength="10" />
+    <Property Name="NationalId" Type="char" MaxLength="11" />
+    <Property Name="EducationDegree" Type="nvarchar" MaxLength="100" />
+    <Property Name="OrgzanisationPost" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Phone" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Mobile" Type="varchar" MaxLength="15" />
+    <Property Name="AgentName" Type="nvarchar" MaxLength="100" />
+    <Property Name="AgentMobile" Type="varchar" MaxLength="15" />
+    <Property Name="AgentEmail" Type="varchar" MaxLength="50" />
+    <Property Name="AgentOrganizationPost" Type="nvarchar" MaxLength="50" />
+    <Property Name="ActivityType" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Address" Type="nvarchar" MaxLength="1000" />
+    <Property Name="InsertDateTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RequestHistory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RequestId" Type="int" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="State" Type="tinyint" Nullable="false" />
+    <Property Name="InsertDateTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Service">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ServiceOutputId" Type="tinyint" Nullable="false" />
+    <Property Name="ServiceTypeId" Type="tinyint" Nullable="false" />
+    <Property Name="URI" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="ServiceInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ServiceId" Type="smallint" Nullable="false" />
+    <Property Name="LanguageTypeId" Type="tinyint" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="1000" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'VAS.dbo.Setting' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Setting">
+    <Key>
+      <PropertyRef Name="EndOfCouponEvent" />
+    </Key>
+    <Property Name="SSLEnabled" Type="bit" />
+    <Property Name="CreditThreshhold" Type="int" />
+    <Property Name="MinCreditForCoupon" Type="int" />
+    <Property Name="EnableUnusedUsers" Type="bit" />
+    <Property Name="AutomaticInvoice" Type="bit" />
+    <Property Name="DefaultCurrencyId" Type="tinyint" />
+    <Property Name="MaxCouponLive" Type="int" />
+    <Property Name="ShowDescriptionOnInvoice" Type="bit" />
+    <Property Name="AlloweMessageSendingTime" Type="int" />
+    <Property Name="NumberOfGridPaging" Type="int" />
+    <Property Name="SignupEvent" Type="bit" />
+    <Property Name="StartServiceEvent" Type="bit" />
+    <Property Name="EndServiceEvent" Type="bit" />
+    <Property Name="EndOfCouponEvent" Type="bit" Nullable="false" />
+    <Property Name="SubscriptionConfirmEvent" Type="bit" />
+    <Property Name="StartTrialEvent" Type="bit" />
+    <Property Name="EndTrialEvent" Type="bit" />
+    <Property Name="EndTrialComming" Type="bit" />
+    <Property Name="EndCoupon" Type="bit" />
+    <Property Name="EndServiceComming" Type="bit" />
+    <Property Name="EndService" Type="bit" />
+    <Property Name="PaymentDeadlineComming" Type="bit" />
+    <Property Name="PaymentDeadlineLeft" Type="bit" />
+    <Property Name="EndCouponComming" Type="bit" />
+  </EntityType>
+  <EntityType Name="Statement">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SubscriptionId" Type="int" Nullable="false" />
+    <Property Name="OpenDate" Type="datetime" />
+    <Property Name="CloseDate" Type="datetime" />
+    <Property Name="SettlementDate" Type="datetime" />
+    <Property Name="Description" Type="nvarchar" MaxLength="1023" Nullable="false" />
+    <Property Name="MessageTypeId" Type="tinyint" />
+    <Property Name="TotalBillAmount" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Subscription">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductId" Type="int" Nullable="false" />
+    <Property Name="CustomerId" Type="int" Nullable="false" />
+    <Property Name="PriceId" Type="int" Nullable="false" />
+    <Property Name="ActivateDate" Type="datetime" Nullable="false" />
+    <Property Name="ExpireDate" Type="datetime" Nullable="false" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+    <Property Name="CouponID" Type="int" />
+  </EntityType>
+  <EntityType Name="Transaction">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="TransactionTypeId" Type="tinyint" Nullable="false" />
+    <Property Name="Amount" Type="bigint" Nullable="false" />
+    <Property Name="SubscriptionId" Type="int" Nullable="false" />
+    <Property Name="DetailDescription" Type="nvarchar(max)" />
+  </EntityType>
+  <Association Name="FK_ActivityLog_Subscription">
+    <End Role="Subscription" Type="Self.Subscription" Multiplicity="1" />
+    <End Role="ActivityLog" Type="Self.ActivityLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Subscription">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ActivityLog">
+        <PropertyRef Name="SubscriptionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AttachmentFile_AttachmentType">
+    <End Role="AttachmentType" Type="Self.AttachmentType" Multiplicity="0..1" />
+    <End Role="AttachmentFile" Type="Self.AttachmentFile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AttachmentType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AttachmentFile">
+        <PropertyRef Name="AttachmentTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Coupon_Discount">
+    <End Role="DiscountType" Type="Self.DiscountType" Multiplicity="1" />
+    <End Role="Coupon" Type="Self.Coupon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DiscountType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Coupon">
+        <PropertyRef Name="DiscountTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Customer_CustomerType">
+    <End Role="CustomerType" Type="Self.CustomerType" Multiplicity="1" />
+    <End Role="Customer" Type="Self.Customer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CustomerType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Customer">
+        <PropertyRef Name="CustomerTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Customer_Request">
+    <End Role="Request" Type="Self.Request" Multiplicity="1" />
+    <End Role="Customer" Type="Self.Customer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Request">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Customer">
+        <PropertyRef Name="RequestId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Message_Message">
+    <End Role="Message" Type="Self.Message" Multiplicity="0..1" />
+    <End Role="Message1" Type="Self.Message" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Message">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Message1">
+        <PropertyRef Name="ParentMessageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Message_MessageType">
+    <End Role="MessageType" Type="Self.MessageType" Multiplicity="1" />
+    <End Role="Message" Type="Self.Message" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MessageType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Message">
+        <PropertyRef Name="MessgaeTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MessageTemplate_Language">
+    <End Role="Language" Type="Self.Language" Multiplicity="1" />
+    <End Role="MessageTemplate" Type="Self.MessageTemplate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Language">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MessageTemplate">
+        <PropertyRef Name="LanguageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pricing_PricingDetails">
+    <End Role="PriceDetail" Type="Self.PriceDetail" Multiplicity="1" />
+    <End Role="Price" Type="Self.Price" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PriceDetail">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Price">
+        <PropertyRef Name="PriceDetailId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PricingDetails_PricingCurrency">
+    <End Role="Currency" Type="Self.Currency" Multiplicity="1" />
+    <End Role="PriceDetail" Type="Self.PriceDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Currency">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PriceDetail">
+        <PropertyRef Name="CurrencyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_Pricing">
+    <End Role="Price" Type="Self.Price" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Price">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="PriceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_ProductFamily">
+    <End Role="ProductFamily" Type="Self.ProductFamily" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductFamily">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="ProductFamilyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductFamily_Language">
+    <End Role="Language" Type="Self.Language" Multiplicity="1" />
+    <End Role="ProductFamily" Type="Self.ProductFamily" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Language">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProductFamily">
+        <PropertyRef Name="LanguageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductFamily_Price">
+    <End Role="Price" Type="Self.Price" Multiplicity="1" />
+    <End Role="ProductFamily" Type="Self.ProductFamily" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Price">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProductFamily">
+        <PropertyRef Name="PriceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductInfo_Language">
+    <End Role="Language" Type="Self.Language" Multiplicity="1" />
+    <End Role="ProductInfo" Type="Self.ProductInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Language">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProductInfo">
+        <PropertyRef Name="LanguageTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductInfo_Product">
+    <End Role="Product" Type="Self.Product" Multiplicity="1" />
+    <End Role="ProductInfo" Type="Self.ProductInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProductInfo">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductService_Product">
+    <End Role="Product" Type="Self.Product" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ProductService" Type="Self.ProductService" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProductService">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductService_Service">
+    <End Role="Service" Type="Self.Service" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ProductService" Type="Self.ProductService" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Service">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProductService">
+        <PropertyRef Name="ServiceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Request_PersonType">
+    <End Role="PersonType" Type="Self.PersonType" Multiplicity="1" />
+    <End Role="Request" Type="Self.Request" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PersonType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Request">
+        <PropertyRef Name="PersonTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RequestHistory_Request">
+    <End Role="Request" Type="Self.Request" Multiplicity="1" />
+    <End Role="RequestHistory" Type="Self.RequestHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Request">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RequestHistory">
+        <PropertyRef Name="RequestId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Service_ServiceOutput">
+    <End Role="ServiceOutputType" Type="Self.ServiceOutputType" Multiplicity="1" />
+    <End Role="Service" Type="Self.Service" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ServiceOutputType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Service">
+        <PropertyRef Name="ServiceOutputId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Service_ServiceType">
+    <End Role="ServiceType" Type="Self.ServiceType" Multiplicity="1" />
+    <End Role="Service" Type="Self.Service" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ServiceType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Service">
+        <PropertyRef Name="ServiceTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ServiceInfo_Language">
+    <End Role="Language" Type="Self.Language" Multiplicity="1" />
+    <End Role="ServiceInfo" Type="Self.ServiceInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Language">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ServiceInfo">
+        <PropertyRef Name="LanguageTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ServiceInfo_Service">
+    <End Role="Service" Type="Self.Service" Multiplicity="1" />
+    <End Role="ServiceInfo" Type="Self.ServiceInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Service">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ServiceInfo">
+        <PropertyRef Name="ServiceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Statement_Message">
+    <End Role="MessageTemplate" Type="Self.MessageTemplate" Multiplicity="0..1" />
+    <End Role="Statement" Type="Self.Statement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MessageTemplate">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Statement">
+        <PropertyRef Name="MessageTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Statement_Subscription">
+    <End Role="Subscription" Type="Self.Subscription" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Statement" Type="Self.Statement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Subscription">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Statement">
+        <PropertyRef Name="SubscriptionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Subscriber_Coupon">
+    <End Role="Coupon" Type="Self.Coupon" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Subscription" Type="Self.Subscription" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Coupon">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Subscription">
+        <PropertyRef Name="CouponID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Subscriber_Product">
+    <End Role="Product" Type="Self.Product" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Subscription" Type="Self.Subscription" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Subscription">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Subscription_Customer">
+    <End Role="Customer" Type="Self.Customer" Multiplicity="1" />
+    <End Role="Subscription" Type="Self.Subscription" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Subscription">
+        <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Subscription_Price">
+    <End Role="Price" Type="Self.Price" Multiplicity="1" />
+    <End Role="Subscription" Type="Self.Subscription" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Price">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Subscription">
+        <PropertyRef Name="PriceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Transaction_Subscription">
+    <End Role="Subscription" Type="Self.Subscription" Multiplicity="1" />
+    <End Role="Transaction" Type="Self.Transaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Subscription">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Transaction">
+        <PropertyRef Name="SubscriptionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Transaction_TransactionType">
+    <End Role="TransactionType" Type="Self.TransactionType" Multiplicity="1" />
+    <End Role="Transaction" Type="Self.Transaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TransactionType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Transaction">
+        <PropertyRef Name="TransactionTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="VASModelStoreContainer">
+    <EntitySet Name="AttachmentType" EntityType="Self.AttachmentType" Schema="base" store:Type="Tables" />
+    <EntitySet Name="BankTransactionType" EntityType="Self.BankTransactionType" Schema="base" store:Type="Tables" />
+    <EntitySet Name="ChargeType" EntityType="Self.ChargeType" Schema="base" store:Type="Tables" />
+    <EntitySet Name="Currency" EntityType="Self.Currency" Schema="base" store:Type="Tables" />
+    <EntitySet Name="CustomerType" EntityType="Self.CustomerType" Schema="base" store:Type="Tables" />
+    <EntitySet Name="DiscountType" EntityType="Self.DiscountType" Schema="base" store:Type="Tables" />
+    <EntitySet Name="Language" EntityType="Self.Language" Schema="base" store:Type="Tables" />
+    <EntitySet Name="MessageType" EntityType="Self.MessageType" Schema="base" store:Type="Tables" />
+    <EntitySet Name="PersonType" EntityType="Self.PersonType" Schema="base" store:Type="Tables" />
+    <EntitySet Name="ServiceOutputType" EntityType="Self.ServiceOutputType" Schema="base" store:Type="Tables" />
+    <EntitySet Name="ServiceType" EntityType="Self.ServiceType" Schema="base" store:Type="Tables" />
+    <EntitySet Name="TransactionType" EntityType="Self.TransactionType" Schema="base" store:Type="Tables" />
+    <EntitySet Name="ActivityLog" EntityType="Self.ActivityLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AttachmentFile" EntityType="Self.AttachmentFile" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Coupon" EntityType="Self.Coupon" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Message" EntityType="Self.Message" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MessageTemplate" EntityType="Self.MessageTemplate" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Price" EntityType="Self.Price" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PriceDetail" EntityType="Self.PriceDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProductFamily" EntityType="Self.ProductFamily" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProductInfo" EntityType="Self.ProductInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProductService" EntityType="Self.ProductService" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Request" EntityType="Self.Request" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RequestHistory" EntityType="Self.RequestHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Service" EntityType="Self.Service" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ServiceInfo" EntityType="Self.ServiceInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Statement" EntityType="Self.Statement" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Subscription" EntityType="Self.Subscription" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Transaction" EntityType="Self.Transaction" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Setting" EntityType="Self.Setting" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Setting].[SSLEnabled] AS [SSLEnabled], 
+    [Setting].[CreditThreshhold] AS [CreditThreshhold], 
+    [Setting].[MinCreditForCoupon] AS [MinCreditForCoupon], 
+    [Setting].[EnableUnusedUsers] AS [EnableUnusedUsers], 
+    [Setting].[AutomaticInvoice] AS [AutomaticInvoice], 
+    [Setting].[DefaultCurrencyId] AS [DefaultCurrencyId], 
+    [Setting].[MaxCouponLive] AS [MaxCouponLive], 
+    [Setting].[ShowDescriptionOnInvoice] AS [ShowDescriptionOnInvoice], 
+    [Setting].[AlloweMessageSendingTime] AS [AlloweMessageSendingTime], 
+    [Setting].[NumberOfGridPaging] AS [NumberOfGridPaging], 
+    [Setting].[SignupEvent] AS [SignupEvent], 
+    [Setting].[StartServiceEvent] AS [StartServiceEvent], 
+    [Setting].[EndServiceEvent] AS [EndServiceEvent], 
+    [Setting].[EndOfCouponEvent] AS [EndOfCouponEvent], 
+    [Setting].[SubscriptionConfirmEvent] AS [SubscriptionConfirmEvent], 
+    [Setting].[StartTrialEvent] AS [StartTrialEvent], 
+    [Setting].[EndTrialEvent] AS [EndTrialEvent], 
+    [Setting].[EndTrialComming] AS [EndTrialComming], 
+    [Setting].[EndCoupon] AS [EndCoupon], 
+    [Setting].[EndServiceComming] AS [EndServiceComming], 
+    [Setting].[EndService] AS [EndService], 
+    [Setting].[PaymentDeadlineComming] AS [PaymentDeadlineComming], 
+    [Setting].[PaymentDeadlineLeft] AS [PaymentDeadlineLeft], 
+    [Setting].[EndCouponComming] AS [EndCouponComming]
+    FROM [dbo].[Setting] AS [Setting]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_ActivityLog_Subscription" Association="Self.FK_ActivityLog_Subscription">
+      <End Role="Subscription" EntitySet="Subscription" />
+      <End Role="ActivityLog" EntitySet="ActivityLog" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AttachmentFile_AttachmentType" Association="Self.FK_AttachmentFile_AttachmentType">
+      <End Role="AttachmentType" EntitySet="AttachmentType" />
+      <End Role="AttachmentFile" EntitySet="AttachmentFile" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Coupon_Discount" Association="Self.FK_Coupon_Discount">
+      <End Role="DiscountType" EntitySet="DiscountType" />
+      <End Role="Coupon" EntitySet="Coupon" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Customer_CustomerType" Association="Self.FK_Customer_CustomerType">
+      <End Role="CustomerType" EntitySet="CustomerType" />
+      <End Role="Customer" EntitySet="Customer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Customer_Request" Association="Self.FK_Customer_Request">
+      <End Role="Request" EntitySet="Request" />
+      <End Role="Customer" EntitySet="Customer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Message_Message" Association="Self.FK_Message_Message">
+      <End Role="Message" EntitySet="Message" />
+      <End Role="Message1" EntitySet="Message" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Message_MessageType" Association="Self.FK_Message_MessageType">
+      <End Role="MessageType" EntitySet="MessageType" />
+      <End Role="Message" EntitySet="Message" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MessageTemplate_Language" Association="Self.FK_MessageTemplate_Language">
+      <End Role="Language" EntitySet="Language" />
+      <End Role="MessageTemplate" EntitySet="MessageTemplate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pricing_PricingDetails" Association="Self.FK_Pricing_PricingDetails">
+      <End Role="PriceDetail" EntitySet="PriceDetail" />
+      <End Role="Price" EntitySet="Price" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PricingDetails_PricingCurrency" Association="Self.FK_PricingDetails_PricingCurrency">
+      <End Role="Currency" EntitySet="Currency" />
+      <End Role="PriceDetail" EntitySet="PriceDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_Pricing" Association="Self.FK_Product_Pricing">
+      <End Role="Price" EntitySet="Price" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_ProductFamily" Association="Self.FK_Product_ProductFamily">
+      <End Role="ProductFamily" EntitySet="ProductFamily" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductFamily_Language" Association="Self.FK_ProductFamily_Language">
+      <End Role="Language" EntitySet="Language" />
+      <End Role="ProductFamily" EntitySet="ProductFamily" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductFamily_Price" Association="Self.FK_ProductFamily_Price">
+      <End Role="Price" EntitySet="Price" />
+      <End Role="ProductFamily" EntitySet="ProductFamily" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductInfo_Language" Association="Self.FK_ProductInfo_Language">
+      <End Role="Language" EntitySet="Language" />
+      <End Role="ProductInfo" EntitySet="ProductInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductInfo_Product" Association="Self.FK_ProductInfo_Product">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="ProductInfo" EntitySet="ProductInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductService_Product" Association="Self.FK_ProductService_Product">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="ProductService" EntitySet="ProductService" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductService_Service" Association="Self.FK_ProductService_Service">
+      <End Role="Service" EntitySet="Service" />
+      <End Role="ProductService" EntitySet="ProductService" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Request_PersonType" Association="Self.FK_Request_PersonType">
+      <End Role="PersonType" EntitySet="PersonType" />
+      <End Role="Request" EntitySet="Request" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RequestHistory_Request" Association="Self.FK_RequestHistory_Request">
+      <End Role="Request" EntitySet="Request" />
+      <End Role="RequestHistory" EntitySet="RequestHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Service_ServiceOutput" Association="Self.FK_Service_ServiceOutput">
+      <End Role="ServiceOutputType" EntitySet="ServiceOutputType" />
+      <End Role="Service" EntitySet="Service" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Service_ServiceType" Association="Self.FK_Service_ServiceType">
+      <End Role="ServiceType" EntitySet="ServiceType" />
+      <End Role="Service" EntitySet="Service" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ServiceInfo_Language" Association="Self.FK_ServiceInfo_Language">
+      <End Role="Language" EntitySet="Language" />
+      <End Role="ServiceInfo" EntitySet="ServiceInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ServiceInfo_Service" Association="Self.FK_ServiceInfo_Service">
+      <End Role="Service" EntitySet="Service" />
+      <End Role="ServiceInfo" EntitySet="ServiceInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Statement_Message" Association="Self.FK_Statement_Message">
+      <End Role="MessageTemplate" EntitySet="MessageTemplate" />
+      <End Role="Statement" EntitySet="Statement" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Statement_Subscription" Association="Self.FK_Statement_Subscription">
+      <End Role="Subscription" EntitySet="Subscription" />
+      <End Role="Statement" EntitySet="Statement" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Subscriber_Coupon" Association="Self.FK_Subscriber_Coupon">
+      <End Role="Coupon" EntitySet="Coupon" />
+      <End Role="Subscription" EntitySet="Subscription" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Subscriber_Product" Association="Self.FK_Subscriber_Product">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="Subscription" EntitySet="Subscription" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Subscription_Customer" Association="Self.FK_Subscription_Customer">
+      <End Role="Customer" EntitySet="Customer" />
+      <End Role="Subscription" EntitySet="Subscription" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Subscription_Price" Association="Self.FK_Subscription_Price">
+      <End Role="Price" EntitySet="Price" />
+      <End Role="Subscription" EntitySet="Subscription" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Transaction_Subscription" Association="Self.FK_Transaction_Subscription">
+      <End Role="Subscription" EntitySet="Subscription" />
+      <End Role="Transaction" EntitySet="Transaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Transaction_TransactionType" Association="Self.FK_Transaction_TransactionType">
+      <End Role="TransactionType" EntitySet="TransactionType" />
+      <End Role="Transaction" EntitySet="Transaction" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

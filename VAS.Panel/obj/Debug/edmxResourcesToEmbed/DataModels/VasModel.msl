@@ -1,0 +1,408 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="VASModelStoreContainer" CdmEntityContainer="VASEntities">
+    <EntitySetMapping Name="AttachmentTypes">
+      <EntityTypeMapping TypeName="VASModel.AttachmentType">
+        <MappingFragment StoreEntitySet="AttachmentType">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AttachmentType1" ColumnName="AttachmentType" />
+          <ScalarProperty Name="AttachmentTypeEn" ColumnName="AttachmentTypeEn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BankTransactionTypes">
+      <EntityTypeMapping TypeName="VASModel.BankTransactionType">
+        <MappingFragment StoreEntitySet="BankTransactionType">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="BankTransactionType1" ColumnName="BankTransactionType" />
+          <ScalarProperty Name="BankTransactionTypeEn" ColumnName="BankTransactionTypeEn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChargeTypes">
+      <EntityTypeMapping TypeName="VASModel.ChargeType">
+        <MappingFragment StoreEntitySet="ChargeType">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ChargeType1" ColumnName="ChargeType" />
+          <ScalarProperty Name="ChargeTypeEn" ColumnName="ChargeTypeEn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Currencies">
+      <EntityTypeMapping TypeName="VASModel.Currency">
+        <MappingFragment StoreEntitySet="Currency">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CurrencyType" ColumnName="CurrencyType" />
+          <ScalarProperty Name="CurrencyTypeEn" ColumnName="CurrencyTypeEn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustomerTypes">
+      <EntityTypeMapping TypeName="VASModel.CustomerType">
+        <MappingFragment StoreEntitySet="CustomerType">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CustomerType1" ColumnName="CustomerType" />
+          <ScalarProperty Name="CustomerTypeEn" ColumnName="CustomerTypeEn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DiscountTypes">
+      <EntityTypeMapping TypeName="VASModel.DiscountType">
+        <MappingFragment StoreEntitySet="DiscountType">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DiscountType1" ColumnName="DiscountType" />
+          <ScalarProperty Name="DiscountTypeEn" ColumnName="DiscountTypeEn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Languages">
+      <EntityTypeMapping TypeName="VASModel.Language">
+        <MappingFragment StoreEntitySet="Language">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Language1" ColumnName="Language" />
+          <ScalarProperty Name="LanguageEn" ColumnName="LanguageEn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MessageTypes">
+      <EntityTypeMapping TypeName="VASModel.MessageType">
+        <MappingFragment StoreEntitySet="MessageType">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MessageType1" ColumnName="MessageType" />
+          <ScalarProperty Name="MessageTypeEn" ColumnName="MessageTypeEn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PersonTypes">
+      <EntityTypeMapping TypeName="VASModel.PersonType">
+        <MappingFragment StoreEntitySet="PersonType">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PersonType1" ColumnName="PersonType" />
+          <ScalarProperty Name="PersonTypeEn" ColumnName="PersonTypeEn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServiceOutputTypes">
+      <EntityTypeMapping TypeName="VASModel.ServiceOutputType">
+        <MappingFragment StoreEntitySet="ServiceOutputType">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ServiceOutputType1" ColumnName="ServiceOutputType" />
+          <ScalarProperty Name="ServiceOutputTypeEn" ColumnName="ServiceOutputTypeEn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServiceTypes">
+      <EntityTypeMapping TypeName="VASModel.ServiceType">
+        <MappingFragment StoreEntitySet="ServiceType">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ServiceType1" ColumnName="ServiceType" />
+          <ScalarProperty Name="ServiceTypeEn" ColumnName="ServiceTypeEn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TransactionTypes">
+      <EntityTypeMapping TypeName="VASModel.TransactionType">
+        <MappingFragment StoreEntitySet="TransactionType">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="BalanceType" ColumnName="BalanceType" />
+          <ScalarProperty Name="TransactionType1" ColumnName="TransactionType" />
+          <ScalarProperty Name="TransactionTypeEn" ColumnName="TransactionTypeEn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ActivityLogs">
+      <EntityTypeMapping TypeName="VASModel.ActivityLog">
+        <MappingFragment StoreEntitySet="ActivityLog">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="SubscriptionId" ColumnName="SubscriptionId" />
+          <ScalarProperty Name="RequestHeader" ColumnName="RequestHeader" />
+          <ScalarProperty Name="ResponseHeader" ColumnName="ResponseHeader" />
+          <ScalarProperty Name="ResponseBody" ColumnName="ResponseBody" />
+          <ScalarProperty Name="StatusCode" ColumnName="StatusCode" />
+          <ScalarProperty Name="URI" ColumnName="URI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AttachmentFiles">
+      <EntityTypeMapping TypeName="VASModel.AttachmentFile">
+        <MappingFragment StoreEntitySet="AttachmentFile">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="AttachmentTypeId" ColumnName="AttachmentTypeId" />
+          <ScalarProperty Name="FileType" ColumnName="FileType" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="FileContent" ColumnName="FileContent" />
+          <ScalarProperty Name="InsertDateTime" ColumnName="InsertDateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Coupons">
+      <EntityTypeMapping TypeName="VASModel.Coupon">
+        <MappingFragment StoreEntitySet="Coupon">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="DiscountTypeId" ColumnName="DiscountTypeId" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="ExpirationDate" ColumnName="ExpirationDate" />
+          <ScalarProperty Name="UsageLimit" ColumnName="UsageLimit" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="VASModel.Customer">
+        <MappingFragment StoreEntitySet="Customer">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CustomerTypeId" ColumnName="CustomerTypeId" />
+          <ScalarProperty Name="RequestId" ColumnName="RequestId" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FatherName" ColumnName="FatherName" />
+          <ScalarProperty Name="IdentityNo" ColumnName="IdentityNo" />
+          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+          <ScalarProperty Name="BirthPlace" ColumnName="BirthPlace" />
+          <ScalarProperty Name="NationalCode" ColumnName="NationalCode" />
+          <ScalarProperty Name="NationalId" ColumnName="NationalId" />
+          <ScalarProperty Name="EducationDegree" ColumnName="EducationDegree" />
+          <ScalarProperty Name="OrganizationPost" ColumnName="OrganizationPost" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="AgentName" ColumnName="AgentName" />
+          <ScalarProperty Name="AgentMobile" ColumnName="AgentMobile" />
+          <ScalarProperty Name="AgentEmail" ColumnName="AgentEmail" />
+          <ScalarProperty Name="AgentOrganizationPost" ColumnName="AgentOrganizationPost" />
+          <ScalarProperty Name="ActivityType" ColumnName="ActivityType" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Province" ColumnName="Province" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+          <ScalarProperty Name="HasTax" ColumnName="HasTax" />
+          <ScalarProperty Name="InsertDateTime" ColumnName="InsertDateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Messages">
+      <EntityTypeMapping TypeName="VASModel.Message">
+        <MappingFragment StoreEntitySet="Message">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MessgaeTypeId" ColumnName="MessgaeTypeId" />
+          <ScalarProperty Name="ParentMessageId" ColumnName="ParentMessageId" />
+          <ScalarProperty Name="MessageTitle" ColumnName="MessageTitle" />
+          <ScalarProperty Name="SenderUserId" ColumnName="SenderUserId" />
+          <ScalarProperty Name="RecieverUserId" ColumnName="RecieverUserId" />
+          <ScalarProperty Name="IsUrgent" ColumnName="IsUrgent" />
+          <ScalarProperty Name="SendDateTime" ColumnName="SendDateTime" />
+          <ScalarProperty Name="ReadDateTime" ColumnName="ReadDateTime" />
+          <ScalarProperty Name="MessageContent" ColumnName="MessageContent" />
+          <ScalarProperty Name="DeleteDateTime" ColumnName="DeleteDateTime" />
+          <ScalarProperty Name="DeleteUserId" ColumnName="DeleteUserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MessageTemplates">
+      <EntityTypeMapping TypeName="VASModel.MessageTemplate">
+        <MappingFragment StoreEntitySet="MessageTemplate">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+          <ScalarProperty Name="MessageTitle" ColumnName="MessageTitle" />
+          <ScalarProperty Name="MessageBody" ColumnName="MessageBody" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Prices">
+      <EntityTypeMapping TypeName="VASModel.Price">
+        <MappingFragment StoreEntitySet="Price">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="PriceDetailId" ColumnName="PriceDetailId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PriceDetails">
+      <EntityTypeMapping TypeName="VASModel.PriceDetail">
+        <MappingFragment StoreEntitySet="PriceDetail">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CurrencyId" ColumnName="CurrencyId" />
+          <ScalarProperty Name="ActivateDate" ColumnName="ActivateDate" />
+          <ScalarProperty Name="ExpireDate" ColumnName="ExpireDate" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="IsDefault" ColumnName="IsDefault" />
+          <ScalarProperty Name="InsertDateTime" ColumnName="InsertDateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="VASModel.Product">
+        <MappingFragment StoreEntitySet="Product">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ProductFamilyId" ColumnName="ProductFamilyId" />
+          <ScalarProperty Name="Trial" ColumnName="Trial" />
+          <ScalarProperty Name="PriceId" ColumnName="PriceId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductFamilies">
+      <EntityTypeMapping TypeName="VASModel.ProductFamily">
+        <MappingFragment StoreEntitySet="ProductFamily">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+          <ScalarProperty Name="PriceId" ColumnName="PriceId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductInfoes">
+      <EntityTypeMapping TypeName="VASModel.ProductInfo">
+        <MappingFragment StoreEntitySet="ProductInfo">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="LanguageTypeId" ColumnName="LanguageTypeId" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductServices">
+      <EntityTypeMapping TypeName="VASModel.ProductService">
+        <MappingFragment StoreEntitySet="ProductService">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="ServiceId" ColumnName="ServiceId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Requests">
+      <EntityTypeMapping TypeName="VASModel.Request">
+        <MappingFragment StoreEntitySet="Request">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PersonTypeId" ColumnName="PersonTypeId" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FatherName" ColumnName="FatherName" />
+          <ScalarProperty Name="IdentityNo" ColumnName="IdentityNo" />
+          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+          <ScalarProperty Name="BirthPlace" ColumnName="BirthPlace" />
+          <ScalarProperty Name="NationalCode" ColumnName="NationalCode" />
+          <ScalarProperty Name="NationalId" ColumnName="NationalId" />
+          <ScalarProperty Name="EducationDegree" ColumnName="EducationDegree" />
+          <ScalarProperty Name="OrgzanisationPost" ColumnName="OrgzanisationPost" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="AgentName" ColumnName="AgentName" />
+          <ScalarProperty Name="AgentMobile" ColumnName="AgentMobile" />
+          <ScalarProperty Name="AgentEmail" ColumnName="AgentEmail" />
+          <ScalarProperty Name="AgentOrganizationPost" ColumnName="AgentOrganizationPost" />
+          <ScalarProperty Name="ActivityType" ColumnName="ActivityType" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="InsertDateTime" ColumnName="InsertDateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Services">
+      <EntityTypeMapping TypeName="VASModel.Service">
+        <MappingFragment StoreEntitySet="Service">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ServiceOutputId" ColumnName="ServiceOutputId" />
+          <ScalarProperty Name="ServiceTypeId" ColumnName="ServiceTypeId" />
+          <ScalarProperty Name="URI" ColumnName="URI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServiceInfoes">
+      <EntityTypeMapping TypeName="VASModel.ServiceInfo">
+        <MappingFragment StoreEntitySet="ServiceInfo">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ServiceId" ColumnName="ServiceId" />
+          <ScalarProperty Name="LanguageTypeId" ColumnName="LanguageTypeId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Statements">
+      <EntityTypeMapping TypeName="VASModel.Statement">
+        <MappingFragment StoreEntitySet="Statement">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="SubscriptionId" ColumnName="SubscriptionId" />
+          <ScalarProperty Name="OpenDate" ColumnName="OpenDate" />
+          <ScalarProperty Name="CloseDate" ColumnName="CloseDate" />
+          <ScalarProperty Name="SettlementDate" ColumnName="SettlementDate" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="MessageTypeId" ColumnName="MessageTypeId" />
+          <ScalarProperty Name="TotalBillAmount" ColumnName="TotalBillAmount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Subscriptions">
+      <EntityTypeMapping TypeName="VASModel.Subscription">
+        <MappingFragment StoreEntitySet="Subscription">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="PriceId" ColumnName="PriceId" />
+          <ScalarProperty Name="ActivateDate" ColumnName="ActivateDate" />
+          <ScalarProperty Name="ExpireDate" ColumnName="ExpireDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CouponID" ColumnName="CouponID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Transactions">
+      <EntityTypeMapping TypeName="VASModel.Transaction">
+        <MappingFragment StoreEntitySet="Transaction">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TransactionTypeId" ColumnName="TransactionTypeId" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="SubscriptionId" ColumnName="SubscriptionId" />
+          <ScalarProperty Name="DetailDescription" ColumnName="DetailDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Settings">
+      <EntityTypeMapping TypeName="VASModel.Setting">
+        <MappingFragment StoreEntitySet="Setting">
+          <ScalarProperty Name="SSLEnabled" ColumnName="SSLEnabled" />
+          <ScalarProperty Name="CreditThreshhold" ColumnName="CreditThreshhold" />
+          <ScalarProperty Name="MinCreditForCoupon" ColumnName="MinCreditForCoupon" />
+          <ScalarProperty Name="EnableUnusedUsers" ColumnName="EnableUnusedUsers" />
+          <ScalarProperty Name="AutomaticInvoice" ColumnName="AutomaticInvoice" />
+          <ScalarProperty Name="DefaultCurrencyId" ColumnName="DefaultCurrencyId" />
+          <ScalarProperty Name="MaxCouponLive" ColumnName="MaxCouponLive" />
+          <ScalarProperty Name="ShowDescriptionOnInvoice" ColumnName="ShowDescriptionOnInvoice" />
+          <ScalarProperty Name="AlloweMessageSendingTime" ColumnName="AlloweMessageSendingTime" />
+          <ScalarProperty Name="NumberOfGridPaging" ColumnName="NumberOfGridPaging" />
+          <ScalarProperty Name="SignupEvent" ColumnName="SignupEvent" />
+          <ScalarProperty Name="StartServiceEvent" ColumnName="StartServiceEvent" />
+          <ScalarProperty Name="EndServiceEvent" ColumnName="EndServiceEvent" />
+          <ScalarProperty Name="EndOfCouponEvent" ColumnName="EndOfCouponEvent" />
+          <ScalarProperty Name="SubscriptionConfirmEvent" ColumnName="SubscriptionConfirmEvent" />
+          <ScalarProperty Name="StartTrialEvent" ColumnName="StartTrialEvent" />
+          <ScalarProperty Name="EndTrialEvent" ColumnName="EndTrialEvent" />
+          <ScalarProperty Name="EndTrialComming" ColumnName="EndTrialComming" />
+          <ScalarProperty Name="EndCoupon" ColumnName="EndCoupon" />
+          <ScalarProperty Name="EndServiceComming" ColumnName="EndServiceComming" />
+          <ScalarProperty Name="EndService" ColumnName="EndService" />
+          <ScalarProperty Name="PaymentDeadlineComming" ColumnName="PaymentDeadlineComming" />
+          <ScalarProperty Name="PaymentDeadlineLeft" ColumnName="PaymentDeadlineLeft" />
+          <ScalarProperty Name="EndCouponComming" ColumnName="EndCouponComming" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RequestHistories">
+      <EntityTypeMapping TypeName="VASModel.RequestHistory">
+        <MappingFragment StoreEntitySet="RequestHistory">
+          <ScalarProperty Name="InsertDateTime" ColumnName="InsertDateTime" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="RequestId" ColumnName="RequestId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

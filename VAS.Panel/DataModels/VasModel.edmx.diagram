@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="dac5cab003b44831bb1b48bc54d326a5" Name="Diagram1">
+        <EntityTypeShape EntityType="VASModel.AttachmentType" Width="1.5" PointX="5.75" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="VASModel.BankTransactionType" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VASModel.ChargeType" Width="1.5" PointX="14.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VASModel.Currency" Width="1.5" PointX="1.5" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="VASModel.CustomerType" Width="1.5" PointX="6" PointY="24.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="VASModel.DiscountType" Width="1.5" PointX="6" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="VASModel.Language" Width="1.5" PointX="0.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VASModel.MessageType" Width="1.5" PointX="9.75" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="VASModel.PersonType" Width="1.5" PointX="3.75" PointY="29.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="VASModel.ServiceOutputType" Width="1.5" PointX="3" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VASModel.ServiceType" Width="1.5" PointX="3" PointY="21.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VASModel.TransactionType" Width="1.5" PointX="13.5" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VASModel.ActivityLog" Width="1.5" PointX="12.75" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="VASModel.AttachmentFile" Width="1.5" PointX="8" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="VASModel.Coupon" Width="1.5" PointX="8.25" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VASModel.Customer" Width="1.5" PointX="8.25" PointY="25.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VASModel.Message" Width="1.5" PointX="12" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="VASModel.MessageTemplate" Width="1.5" PointX="3" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VASModel.Price" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VASModel.PriceDetail" Width="1.5" PointX="1.5" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="VASModel.Product" Width="1.5" PointX="5.25" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="VASModel.ProductFamily" Width="1.5" PointX="3" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="VASModel.ProductInfo" Width="1.5" PointX="7.5" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="VASModel.ProductService" Width="1.5" PointX="7.5" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VASModel.Request" Width="1.5" PointX="6" PointY="27.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="VASModel.Service" Width="1.5" PointX="5.25" PointY="19.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="VASModel.ServiceInfo" Width="1.5" PointX="3" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VASModel.Statement" Width="1.5" PointX="5.25" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="VASModel.Subscription" Width="1.5" PointX="10.5" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="VASModel.Transaction" Width="1.5" PointX="15.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VASModel.Setting" Width="1.5" PointX="10.75" PointY="14.75" IsExpanded="true" />
+        <AssociationConnector Association="VASModel.FK_AttachmentFile_AttachmentType" ManuallyRouted="false" />
+        <AssociationConnector Association="VASModel.FK_PricingDetails_PricingCurrency" ManuallyRouted="false" />
+        <AssociationConnector Association="VASModel.FK_Customer_CustomerType" ManuallyRouted="false" />
+        <AssociationConnector Association="VASModel.FK_Coupon_Discount" ManuallyRouted="false" />
+        <AssociationConnector Association="VASModel.FK_MessageTemplate_Language" ManuallyRouted="false" />
+        <AssociationConnector Association="VASModel.FK_ProductFamily_Language" ManuallyRouted="false" />
+        <AssociationConnector Association="VASModel.FK_ProductInfo_Language" ManuallyRouted="false" />
+        <AssociationConnector Association="VASModel.FK_ServiceInfo_Language" ManuallyRouted="false" />
+        <AssociationConnector Association="VASModel.FK_Message_MessageType" ManuallyRouted="false" />
+        <AssociationConnector Association="VASModel.FK_Request_PersonType" ManuallyRouted="false" />
+        <AssociationConnector Association="VASModel.FK_Service_ServiceOutput" ManuallyRouted="false" />
+        <AssociationConnector Association="VASModel.FK_Service_ServiceType" ManuallyRouted="false" />
+        <AssociationConnector Association="VASModel.FK_Transaction_TransactionType" ManuallyRouted="false" />
+        <AssociationConnector Association="VASModel.FK_ActivityLog_Subscription" ManuallyRouted="false" />
+        <AssociationConnector Association="VASModel.FK_Subscriber_Coupon" ManuallyRouted="false" />
+        <AssociationConnector Association="VASModel.FK_Customer_Request" ManuallyRouted="false" />
+        <AssociationConnector Association="VASModel.FK_Subscription_Customer" ManuallyRouted="false" />
+        <AssociationConnector Association="VASModel.FK_Message_Message" ManuallyRouted="false" />
+        <AssociationConnector Association="VASModel.FK_Statement_Message" ManuallyRouted="false" />
+        <AssociationConnector Association="VASModel.FK_Pricing_PricingDetails" ManuallyRouted="false" />
+        <AssociationConnector Association="VASModel.FK_Product_Pricing" ManuallyRouted="false" />
+        <AssociationConnector Association="VASModel.FK_ProductFamily_Price" ManuallyRouted="false" />
+        <AssociationConnector Association="VASModel.FK_Subscription_Price" ManuallyRouted="false" />
+        <AssociationConnector Association="VASModel.FK_Product_ProductFamily" ManuallyRouted="false" />
+        <AssociationConnector Association="VASModel.FK_ProductInfo_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="VASModel.FK_ProductService_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="VASModel.FK_Subscriber_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="VASModel.FK_ProductService_Service" ManuallyRouted="false" />
+        <AssociationConnector Association="VASModel.FK_ServiceInfo_Service" ManuallyRouted="false" />
+        <AssociationConnector Association="VASModel.FK_Statement_Subscription" ManuallyRouted="false" />
+        <AssociationConnector Association="VASModel.FK_Transaction_Subscription" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="VASModel.RequestHistory" Width="1.5" PointX="8.25" PointY="34" />
+        <AssociationConnector Association="VASModel.FK_RequestHistory_Request" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
