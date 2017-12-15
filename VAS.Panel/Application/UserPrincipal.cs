@@ -29,24 +29,24 @@ namespace VAS.Panel.Application
 
         public bool IsInRole(string role)
         {
-            return ((UserIdentity)Identity).Role == role;
+            return ((UserIdentity)Identity).Roles.Contains(role);
         }
 
-        public string CurrentRole { get { return ((UserIdentity)Identity).Role; } }
-        public bool IsAdmin { get { return CurrentRole == Role.Admin; } }
-        public bool IsEmployee { get { return CurrentRole == Role.Employee; } }
-        public bool IsEndUser { get { return CurrentRole == Role.EndUser; } }
+        public IList<string> CurrentRoles { get { return ((UserIdentity)Identity).Roles; } }
+        public bool IsAdmin { get { return CurrentRoles.Contains(Role.Admin); } }
+        public bool IsEmployee { get { return CurrentRoles.Contains(Role.Employee); } }
+        public bool IsEndUser { get { return CurrentRoles.Contains(Role.EndUser); } }
         public int UserID { get { return ((UserIdentity)Identity).UserID; } }
     }
 
     public class UserIdentity : IIdentity
     {
-        public UserIdentity(string name, string authenticationType, bool isAuthenticated, string role)
+        public UserIdentity(string name, string authenticationType, bool isAuthenticated, List<string> roles)
         {
             _Name = name;
             _AuthenticationType = authenticationType;
             _IsAuthenticated = isAuthenticated;
-            _Role = role;
+            _Roles = roles;
         }
 
 
@@ -55,7 +55,7 @@ namespace VAS.Panel.Application
         public string Name { get { return _Name; } }
         public string AuthenticationType { get { return _AuthenticationType; } }
         public bool IsAuthenticated { get { return _IsAuthenticated; } }
-        public string Role { get { return _Role; } }
+        public IList<string> Roles { get { return _Roles; } }
         public int UserID { get { return _UserID; } }
 
         #endregion
@@ -65,7 +65,7 @@ namespace VAS.Panel.Application
         readonly string _Name;
         readonly string _AuthenticationType;
         readonly bool _IsAuthenticated;
-        readonly string _Role;
+        readonly List<string> _Roles;
         readonly int _UserID;
 
         #endregion

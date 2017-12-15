@@ -1,4 +1,4 @@
-﻿using System; 
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -28,7 +28,7 @@ namespace VAS.Panel.Application
 
             if (principal == null)
             {
-                principal = new UserPrincipal(new UserIdentity("Saman", "test", true, Role.Admin));
+                principal = new UserPrincipal(new UserIdentity("Saman", "test", true, new List<string>() { Role.Admin, Role.Employee }));
             }
 
             Thread.CurrentPrincipal = principal;
@@ -50,7 +50,7 @@ namespace VAS.Panel.Application
                         StatusCode = HttpStatusCode.Forbidden,
                         Content = new StringContent(Messages.INVALID_AUTHENTICATION)
                     };
-                }   
+                }
             }
             else
             {

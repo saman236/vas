@@ -144,9 +144,9 @@ namespace VAS.Panel.Models
 
     public enum RequestState
     {
-        Rejected = -1,
-        UnChecked = 0,
-        EmployeeApproved = 1,
-        ManagerApproved = 2,
+        Rejected = 0,
+        UnChecked = 1,
+        EmployeeApproved = 2,
+        ManagerApproved = 3,
     }
 }

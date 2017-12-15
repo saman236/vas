@@ -53,7 +53,7 @@ namespace VAS.Panel.Models
 
         #region Class Methods
 
-        internal void SaveHistory(RequestHistoryPOCO history)
+        internal void Save(RequestHistoryPOCO history)
         {
             Context.RequestHistories.Add(ToDBEntity(history));
             Context.SaveChanges();

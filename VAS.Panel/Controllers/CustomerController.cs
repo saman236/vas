@@ -77,7 +77,7 @@ namespace VAS.Panel.Controllers
             var context = ApplicationEntityContextFactory.Current;
             var map = new RequestMapper(context);
             var historyMap = new RequestHistoryMapper(context);
-            var request = map.GetObjectByID(requestID);
+            var request = map.GetRequestPOCOQueryable().FirstOrDefault(t => t.ID == requestID);
 
             if (state == RequestState.UnChecked)
             {
@@ -168,7 +168,7 @@ namespace VAS.Panel.Controllers
                 State = state,
                 UserId = UserManagment.CurrentUser.UserID
             };
-            historyMap.SaveHistory(histoy);
+            historyMap.Save(histoy);
 
             return Request.CreateResponse(true);
         }
